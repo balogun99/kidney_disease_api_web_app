@@ -6,5 +6,5 @@ uvicorn
 joblib
 fastapi
 requests
-json
+# json
 pydantic
