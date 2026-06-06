@@ -19,7 +19,10 @@ class model_input(BaseModel):
     CKD_Status : int
 
 # load the model
-kidney_model = pickle.load(open('/Users/macbookpro/Desktop/End-to-End Projects/kidney_disease/model/kidney_model.sav', 'rb'))
+kidney_model = pickle.load(
+    open("model/kidney_model.sav", "rb")
+)
+# kidney_model = pickle.load(open('/Users/macbookpro/Desktop/End-to-End Projects/kidney_disease/model/kidney_model.sav', 'rb'))
 
 # create endpoint
 @app.post('/kidney_prediction')
