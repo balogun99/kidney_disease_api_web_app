@@ -3,9 +3,8 @@ import numpy as np
 import pickle
 # from src.kidney_model_API import kidney_pred
 
-kidney_model = pickle.load(
-    open("model/kidney_model.sav", "rb")
-)
+with open("model/kidney_model.sav", "rb") as f:
+    kidney_model = pickle.load(f)
 
 # kidney_model = pickle.load(open('/Users/macbookpro/Desktop/End-to-End Projects/kidney_disease/model/kidney_model.sav', 'rb'))
 # kidney_model = pickle.load(open('/Users/macbookpro/Desktop/End-to-End Projects/kidney_disease/notebooks/kidney_model_present.sav', 'rb'))

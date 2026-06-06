@@ -11,9 +11,8 @@ import nest_asyncio
 # load fastapi
 app = FastAPI()
 
-kidney_model = pickle.load(
-    open("model/kidney_model.sav", "rb")
-)
+with open("model/kidney_model.sav", "rb") as f:
+    kidney_model = pickle.load(f)
 
 origins = ['*']
 
